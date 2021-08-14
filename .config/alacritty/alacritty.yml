@@ -1,1 +1,84 @@
+# Window Customization
+window:
+  dimensions:
+    columns: 140
+    lines: 38
+  padding:
+    x: 25
+    y: 25
+  decorations: none
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: .7
+window.dynamic_title: true
 
+# Font configuration
+font:
+  normal:
+    family: Fira Code
+    style: Regular
+  bold:
+    family: Fira Code
+    style: Bold
+  italic:
+    family: Fira Code
+    style: Italic
+  bold_italic:
+    family: Fira Code
+    style: Bold Italic
+  # Point size
+  size: 11.0
+  #spacing
+  offset:
+    x: 0
+    y: 0
+  # Glyph offset determines the locations of the glyphs within their cells with
+  glyph_offset:
+    x: 0
+    y: 0
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+#colors
+colors:
+  # Default colors
+  primary:
+    background: "0x1b182c"
+    foreground: "0xcbe3e7"
+
+  # Normal colors
+  normal:
+    black: "0x100e23"
+    red: "0xff8080"
+    green: "0x95ffa4"
+    yellow: "0xffe9aa"
+    blue: "0x91ddff"
+    magenta: "0xc991e1"
+    cyan: "0xaaffe4"
+    white: "0xcbe3e7"
+
+  # Bright colors
+  bright:
+    black: "0x565575"
+    red: "0xff5458"
+    green: "0x62d196"
+    yellow: "0xffb378"
+    blue: "0x65b2ff"
+    magenta: "0x906cff"
+    cyan: "0x63f2f1"
+    white: "0xa6b3cc"
+
+save_to_clipboard: true
+
+#cursor
+cursor:
+  style: Block
+
+  unfocused_hollow: true
+
+  #bindings
+key_bindings:
+  - { key: PageUp, mods: Shift, action: ScrollPageUp, mode: ~Alt }
+  - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt }
