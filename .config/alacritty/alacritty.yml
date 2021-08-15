@@ -16,16 +16,16 @@ window.dynamic_title: true
 # Font configuration
 font:
   normal:
-    family: Fira Code
+    family: Fira code
     style: Regular
   bold:
-    family: Fira Code
+    family: Fira code
     style: Bold
   italic:
-    family: Fira Code
+    family: Fira code
     style: Italic
   bold_italic:
-    family: Fira Code
+    family: Fira code
     style: Bold Italic
   # Point size
   size: 11.0

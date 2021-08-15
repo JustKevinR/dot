@@ -126,6 +126,8 @@ exec {BASH_XTRACEFD}>/dev/null
 # ignore duplicated commands
 export HISTCONTROL=ignoreboth
 
+exec zsh
+
 # custom alias
 alias w='nitrogen --set-zoom-fill --random ~/Pictures/wallpapers'
 alias la='ls -a'
