@@ -18,7 +18,7 @@ zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # Aliases
-alias wal='nitrogen --set-zoom-fill --random ~/Pictures/wallpapers'
+alias wal='nitrogen --set-zoom-fill --random ~/Media/wallpapers'
 alias la='ls -a'
 alias ll='ls -alF'
 alias mv='mv -i'
@@ -33,9 +33,12 @@ alias BT="echo systemctl restart bluetooth / bluetoothctl"
 alias clock='tty-clock -sct -f"%a, %d %b %Y" -C4'
 alias kill='killall -q'
 alias commit='git add -A; git commit -m'
+alias push='git push'
 alias pac='sudo pacman'
 alias s='startx'
 alias shot='flameshot gui'
+alias home='xrandr --output LVDS-1 --auto --left-of HDMI-1 --output HDMI-1 --auto --primary'
+alias poweroff='sudo poweroff'
 
 # Ignore duplicated commands
 export HISTCONTROL=ignoreboth
