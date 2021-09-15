@@ -41,7 +41,7 @@ alias home='xrandr --output LVDS-1 --auto --left-of HDMI-1 --output HDMI-1 --aut
 alias poweroff='sudo poweroff'
 
 # Ignore duplicated commands
-export HISTCONTROL=ignoreboth
+setopt histignoredups
 
 # Auto CD
 setopt autocd
