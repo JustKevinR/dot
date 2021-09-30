@@ -312,7 +312,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Dmenu
-    awful.key({ modkey },            "space",     function () 
+    awful.key({ modkey },            "space",     function ()
     awful.util.spawn("dmenu_run") end,
               {description = "launch dmenu", group = "Custom"}),
 
