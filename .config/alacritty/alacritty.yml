@@ -16,16 +16,16 @@ window.dynamic_title: true
 # Font configuration
 font:
   normal:
-    family: Fira code
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: Fira code
+    family: Hack Nerd Font Mono
     style: Bold
   italic:
-    family: Fira code
+    family: Hack Nerd Font Mono
     style: Italic
   bold_italic:
-    family: Fira code
+    family: Hack Nerd Font Mono
     style: Bold Italic
   # Point size
   size: 11.0
@@ -70,7 +70,6 @@ colors:
     cyan: "0x63f2f1"
     white: "0xa6b3cc"
 
-  
 save_to_clipboard: true
 
 #cursor

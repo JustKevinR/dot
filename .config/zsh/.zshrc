@@ -1,5 +1,6 @@
 # Basic Stuff
 export EDITOR='nvim'
+export PATH=~/.local/bin:$PATH
 export TERMINAL='alacritty'
 export BROWSER='firefox-developer-edition'
 export TERM='xterm-256color'
@@ -7,14 +8,35 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Prompt
-PROMPT='%F{blue}%1~%f '
+#PROMPT='%F{blue}%1~%f '
 
+#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+autoload -U colors && colors
+
+# Prompt Settings
+declare -a PROMPTS
+PROMPTS=(
+    "∮"
+    "∯"
+    "≎"
+    ""
+    ""
+    ""
+    ""
+    ""
+    ""
+)
+RANDOM=$$$(date +%s)
+ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
+PROMPT='%F{magenta}%1~%f %F{magenta}$ignition%f '
+
+## Git Settings
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
+zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # Aliases
@@ -39,6 +61,10 @@ alias s='startx'
 alias shot='flameshot gui'
 alias home='xrandr --output LVDS-1 --auto --left-of HDMI-1 --output HDMI-1 --auto --primary'
 alias poweroff='sudo poweroff'
+alias ls="ptls"
+alias pwd="ptpwd"
+alias mkdir="ptmkdir"
+alias touch="pttouch"
 
 # Ignore duplicated commands
 setopt histignoredups
@@ -53,7 +79,3 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# Enable colors and change prompt
-autoload -U colors && colors
-PROMPT='%F{blue}%1~%f '
-#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
