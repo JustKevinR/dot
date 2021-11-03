@@ -25,6 +25,12 @@ PROMPTS=(
     ""
     ""
     ""
+    ""
+    ""
+    ""
+    ""
+    ""
+    ""
 )
 RANDOM=$$$(date +%s)
 ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
@@ -55,7 +61,6 @@ alias BT="echo systemctl restart bluetooth / bluetoothctl"
 alias clock='tty-clock -sct -f"%a, %d %b %Y" -C4'
 alias kill='killall -q'
 alias commit='git add -A; git commit -m'
-alias gp= 'git push'
 alias pac='sudo pacman'
 alias s='startx'
 alias shot='flameshot gui'
