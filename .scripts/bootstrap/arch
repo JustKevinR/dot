@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+echo "Before running, insure git is installed, and arch bootstrap script is in the home directory"
+echo ' '
+
+sudo pacman -S openssh
+ssh-keygen -t ecdsa -b 521
+
+echo ' '
+echo 'Add this public key, to your GitHub account before continuing' 
+echo ' '
+cat ~/.ssh/id_ecdsa.pub
+echo ' '
+
+echo 'Press any key when ready to continue"
+read y
+
+cd ~
+mkdir Repo
+cd Repo
+
+#Pull down Github files
+git clone git@github.com:JustKevinR/dot.git
+git clone git@github.com:JustKevinR/fonts.git
+
+cd ~
+mkdir Media
+cd Media
+git clone git@github.com:JustKevinR/wallpapers
+cd ~
+
+#Linking up files
+ln -s ~/Repo/fonts/kev-fonts /usr/share/fonts
+ln -s ~/Repo/dot/.script ~/
+ln -s ~/Repo/dot/.config ~/
+ln -s ~/Repo/.zshenv ~/
+
+#Set up YAY
+sudo pacman -S base-devel
+cd ~/Repo
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
+
+#Install applications
+pacman=(
+xorg
+awesome
+termite
+unzip
+nitrogen
+picom
+alacritty
+neovim
+python-pip
+NetworkManager
+ttf-fira-code
+neofetch
+flameshot
+    )
+
+sudo pacman -S ${pacman[@]}

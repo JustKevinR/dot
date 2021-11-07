@@ -1,4 +1,5 @@
 # Basic Stuff
+PATH=$PATH:$HOME/.scripts
 export EDITOR='nvim'
 export PATH=~/.local/bin:$PATH
 export TERMINAL='alacritty'
