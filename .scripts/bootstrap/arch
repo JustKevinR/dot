@@ -46,7 +46,6 @@ cd ~
 #Install applications
 pacman=(
 xorg
-awesome
 termite
 unzip
 nitrogen
@@ -61,3 +60,10 @@ flameshot
     )
 
 sudo pacman -S ${pacman[@]}
+
+yay=(
+cava
+visual-studio-code-bin
+discord
+)
+sudo pacman -S ${yay[@]}
