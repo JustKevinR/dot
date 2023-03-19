@@ -46,6 +46,14 @@ cd ~/Repo/yay
 makepkg -si
 cd ~
 
+#Importing Collision
+cd ~/Repo
+git clone https://github.com/Elv13/collision
+cd ~/Repo/
+mv collision ~/Repo/dot/.config/awesome
+cd ~
+
+
 #Install applications
 pacman=(
 unzip
