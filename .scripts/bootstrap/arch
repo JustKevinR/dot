@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+echo ' '
 echo "Before running, insure git is installed, and arch bootstrap script is in the home directory"
 echo ' '
 echo 'Press any key when arch bootstrap script is in the home directory'
 read y
+echo ' '
 
 sudo pacman -S openssh
 ssh-keygen -t ecdsa -b 521
@@ -16,6 +18,7 @@ echo ' '
 
 echo 'Press any key when ready to continue'
 read y
+echo ' '
 
 cd ~
 cd Repo
