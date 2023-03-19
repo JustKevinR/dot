@@ -2,6 +2,8 @@
 
 echo "Before running, insure git is installed, and arch bootstrap script is in the home directory"
 echo ' '
+echo 'Press any key when arch bootstrap script is in the home directory'
+read y
 
 sudo pacman -S openssh
 ssh-keygen -t ecdsa -b 521
