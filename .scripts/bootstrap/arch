@@ -16,11 +16,9 @@ echo 'Press any key when ready to continue"
 read y
 
 cd ~
-mkdir Repo
 cd Repo
 
 #Pull down Github files
-git clone git@github.com:JustKevinR/dot.git
 git clone git@github.com:JustKevinR/fonts.git
 
 cd ~
